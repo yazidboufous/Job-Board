@@ -1,0 +1,118 @@
+<!-- CSC337 CHIU YEH CHEN
+    This file contains a html to add user and login.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Job Board: Post Job</title>
+    <link id="cssFile" rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/0654b390cc.js" crossorigin="anonymous"></script>
+    <!-- Font links: Abel, Dongle -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="index_body">
+    <div id="header"> 
+        <div><h1 id="logo"> Job Board </h1></div>
+
+        <div id="info"> 
+            <div id="jobpost">
+                <i class="fa-solid fa-briefcase"></i>
+                <p onclick="sendToPostings()"> Post Jobs </p><br>
+            </div>
+        <div> <p onclick="sendToHelp()"> Help Page </p></div>
+        <div> <i id="profile" class="fa-solid fa-user" onclick="sendRToProfile()"></i> </div>
+        </div> 
+    </div>
+
+    </div>
+
+    <div id="job-post">
+
+        <p id="first-title"> Add the job information </p>
+        
+        <div class="job-info">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"><br>    
+        </div>
+
+        <div class="job-info">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description"><br>
+        </div>
+
+        <div class="job-info">
+            <label for="company">Company name:</label>
+            <input type="text" id="company" name="company"><br>
+        </div>
+
+        <div class="job-info">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location"><br>
+        </div>
+
+        <div class="job-info">
+            <legend>Employment type:</legend>
+                <div>
+                    <label for="fullTime">Full-time</label>
+                    <span><input type="radio" name="employment" value="Full-time" required></span>
+                    <span><label for="partTime">Part-time</label>
+                    <input type="radio" name="employment" value="Part-time" required></span>
+                    <span><label for="contract">Contract</label>
+                    <input type="radio" name="employment" value="Contract" required></span>
+                </div>
+        </div>
+
+        <div class="job-info">
+                <legend>Experience level:</legend>
+                <div>
+                        <label for="entryLevel">Entry-level</label>
+                        <span><input type="radio" name="experience" value="Entry-level" required></span>
+                        <span><label for="midLevel">Mid-level</label>
+                        <input type="radio" name="experience" value="Mid-level" required></span>
+                        <span><label for="seniorLevel">Senior-level</label>
+                        <input type="radio" name="experience" value="Senior-level" required></span>
+                </div>
+        </div>
+
+        <div class="job-info">
+                <legend>Education level:</legend>
+                <div>
+                    <label for="highSchool">High School</label>
+                    <span><input type="radio" name="education" value="High School" required></span>
+                    <span><label for="bachelors">Bachelor's Degree</label>
+                    <input type="radio" name="education" value="Bachelor's Degree" required></span>
+                    <span><label for="masters">Master's Degree</label>
+                    <input type="radio" name="education" value="Master's Degree" required></span>
+                </div>
+        </div>
+
+        <div class="job-info">
+            <button type="submit" onclick="postJob()"> Submit </button>
+        </div>
+
+    </div>
+
+    <script>
+        const btn = document.querySelector('#btn');        
+        const radioButtons = document.querySelectorAll('input[name="employment"]');
+        btn.addEventListener("click", () => {
+            let selectedSize;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedSize = radioButton.value;
+                    break;
+                }
+            }
+            // show the output:
+            output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any options`;
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

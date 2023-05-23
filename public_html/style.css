@@ -1,0 +1,244 @@
+/* 
+this file contains the css needed for the index.html.
+*/
+
+/* used for login and recruiter */
+* {
+    box-sizing: border-box;
+}
+
+.font-loader {
+    font-family: 'Abel';
+}
+
+body{
+    margin:0;
+    box-sizing: border-box; 
+    background-color:#e2eef4;
+    height:100%;
+}
+
+/* Index page header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    color: #F4F1DE;
+    display:flex;
+    justify-content:space-between;
+    align-items:center ;
+    background-color: #3D405B;
+    height: 13vh;   
+    position: fixed;
+    width:100%;
+    z-index:100;
+    cursor:pointer;
+}
+
+#logo{
+    font-family: 'Dongle', sans-serif;
+    font-size:60px;
+    margin-left:6vw;
+}
+
+#info{
+    display: flex;
+    align-items:center ;
+    font-family: 'Abel';
+}
+
+#info div{
+    margin-right:4vw;
+    font-size:20px;
+    font-weight:600;
+}
+
+#jobpost{
+    display:flex;
+    align-items: center;
+}
+
+#jobpost i{
+    margin-right:4px;
+}
+
+/* Main content of Index page */
+.index_content{
+    position: absolute;
+    font-family: 'Abel';
+    font-weight: bolder;    
+    top: 13vh;
+    left:0;
+    right:0;
+    bottom:0;  
+    height:150%;
+    background-color: #EDF2F4;
+}
+
+#logIn {
+    width:80vh;
+    height:50vh;
+    float: right;
+    right:5%;
+    position: relative;
+    background-color: #d8e0e37a;
+    border: solid 1px #d8e0e3c0;
+    box-shadow: 10px 10px #d8e0e3d9;
+    align-items: center;
+}
+
+#createAccount {
+    width:80vh;
+    height:50vh;
+    float: left;
+    left: 5%;
+    position: relative;
+    background-color: #d8e0e37a;
+    border: solid 1px #d8e0e3c0;
+    box-shadow: 10px 10px #d8e0e3d9;
+    align-items: center;
+}
+
+#createAccount h1 {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#createAccount label {
+    display: inline-block; 
+    margin-top: 5px;
+    margin-left: 3vh;
+    font-size: 2vh;
+    width: 30vh; 
+    text-align: right;
+}
+
+#createAccount legend {
+    font-size: larger;
+}
+
+#createAccount p {
+    text-align: center;
+    font-size: 2.1vh;
+    position: absolute;
+    left: 10vh;
+    right: 10vh;
+    padding: 3vh;
+    font-family: 'Abel';
+    font-weight: bolder;    
+    color: #E07A5F;
+}
+
+#logIn h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#logIn label {
+    display: inline-block; 
+    margin-top: 5px;
+    margin-left: 3vh;
+    font-size: 2vh;
+    width: 30vh; 
+    text-align: right;
+}
+
+#logIn p {
+    text-align: center;
+    font-size: 2.1vh;
+    position: absolute;
+    left: 10vh;
+    right: 10vh;
+    padding: 3vh;
+    font-family: 'Abel';
+    font-weight: bolder;    
+    color: #E07A5F;
+}
+
+.inputButton {
+    position: absolute;
+    bottom:   0;
+    text-align: center;
+    height:5vh;
+    width:30vh;
+    left: 25vh;
+    right: 25vh;
+    font-size: large;
+    font-family: 'Abel';
+    font-weight: bolder;    
+}
+
+.accountInput {
+    height: 2.5vh;
+
+}
+fieldset {
+    margin-top: 3vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line {
+    display:flex;
+    height: 2px;
+    margin-bottom: 15px;
+    background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 5px,
+      black 10px,
+      black 20px
+    );
+}
+
+#content {
+    text-align: center;
+    font-family: 'Abel';
+    font-weight: bolder;
+    position: absolute;
+    background-color: #8D99AE;
+    left:0;
+    right:0;
+    top:100vh;
+    height:100%;
+}
+
+#desc {
+    text-align: center;
+    color: #8D99AE;
+}
+
+/* help section */
+
+.help_content{
+    position: absolute;
+    font-family: 'Abel';
+    font-weight: bolder;    
+    top: 13vh;
+    left:0;
+    right:0;
+    color:#3D405B
+}
+
+#help {
+    position: relative;
+    text-align: center;
+    color: #2B2D42;
+    background-color: #8D99AE;
+    padding:2vh;
+}
+
+.userTypes {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userTypes p {
+    text-align: center;
+}
